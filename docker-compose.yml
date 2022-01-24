@@ -1,0 +1,27 @@
+version: "3"
+
+services:
+  aluno:
+    container_name: api-aluno
+    build:
+      dockerfile: Dockerfile
+      context: ./api-aluno/
+    ports:
+      - "80:80"
+    restart: always
+    networks:
+      - app-network
+  professor:
+    container_name: api-professor
+    build:
+      dockerfile: Dockerfile
+      context: ./api-professor/
+    ports:
+      - "81:81"
+    restart: always
+    networks:
+      - app-network
+networks:
+  app-network:
+    driver: bridge
+    external: true
