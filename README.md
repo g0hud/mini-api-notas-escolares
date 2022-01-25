@@ -109,7 +109,16 @@ Infelizmente não tive tempo hábil para finalizar todos os requisitos, as APIs 
 
 MAS o docker ainda não está funcionando.
 
-Para executar as APIs, deve-se entrar em cada diretório e usar os comandos a seguir:
+Para executar as APIs, deve-se entrar em cada diretório (aconselho utilizar 2 terminais) e usar os comandos a seguir:
+
+```bash
+  cd api-aluno
+```
+e em outro terminal
+
+```bash
+  cd api-professor
+```
 
 #### Para instalar as bibliotecas:
 
@@ -122,6 +131,28 @@ Para executar as APIs, deve-se entrar em cada diretório e usar os comandos a se
 ```bash
   npm start
 ```
+
+
+## DOCKER
+
+Em testes, consegui subir os containers de cada API, mas ao utilizar o Insomnia e Postman, obtive algum erro de conexão entre o host e o container.
+
+Executei os comandos abaixo para criar uma network e iniciar as APIs.
+
+```bash
+    docker network create app-network
+```
+
+```bash
+    docker-compose up -d
+```
+
+Lembrando que em cada diretório (api-aluno e api-professor) deve conter o .env com a URL do banco de dados e a porta.
+
+Em breve espero conseguir desvendar este contratempo.
+
+Caso queira ajudar, toda ajuda/conselho será bem-vinda!
+
 
 ## Especificações técnicas
 
