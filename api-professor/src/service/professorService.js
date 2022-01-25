@@ -17,8 +17,6 @@ class ProfessorService {
   async postGrades(alunoDTO) {
     const {aluno_id, n1,n2,n3,n4} = alunoDTO;
 
-    console.log(alunoDTO);
-
     const alunoData = await professorDAO.postGrades(aluno_id, n1, n2, n3, n4);
 
     if(!alunoData) {

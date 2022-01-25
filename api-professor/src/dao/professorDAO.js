@@ -18,10 +18,10 @@ class ProfessorDAO {
         }
       })
       .catch((err) => {
-        console.log(err);
         return {
           error: true,
-          message: 'Erro ao conectar ao banco.'
+          message: 'Erro ao conectar ao banco.',
+          err
         }
       })
 

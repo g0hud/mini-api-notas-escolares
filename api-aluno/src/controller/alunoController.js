@@ -6,8 +6,6 @@ class AlunoController {
   async getAll(req, res) {
     const { id } = req.params;
 
-    console.log(id);
-
     if (id) {
       const alunoData = await alunoService.getAllGradesById(id)
 
